@@ -502,7 +502,7 @@ export default function App() {
       <div className="wrap">
         {role === "cliente" && (
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Arena+Azul+Jaen+Peru"
+            href="https://www.google.com/maps/place/5%C2%B043'23.0%22S+78%C2%B047'58.3%22W/@-5.7230626,-78.8021036,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-5.7230626!4d-78.7995287!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="howto-btn"
