@@ -88,7 +88,7 @@ const CSS = `
 
 .cs-root{
   --bg:#F8FAFC; --bg2:#F1F5F9; --surf:#FFFFFF; --surf2:#F1F5F9; --line:#E5E7EB;
-  --turf:#2563EB; --turf-dim:#1D4ED8; --amber:#D97706; --yape:#7A3FF2; --yape2:#5B2ED6;
+  --turf:#0060F8; --turf-dim:#0047BE; --amber:#F5B400; --yape:#7A3FF2; --yape2:#5B2ED6;
   --txt:#1E293B; --mut:#64748B; --danger:#DC2626; --danger-bg:#FEE2E2;
   font-family:'Inter',system-ui,sans-serif; color:var(--txt);
   background:var(--bg);
@@ -103,8 +103,8 @@ const CSS = `
 /* Fondo animado de la pantalla de bienvenida */
 .bg-blobs{position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none;}
 .bg-blobs .blob{position:absolute; border-radius:50%; filter:blur(70px); will-change:transform;}
-.bg-blobs .b1{width:340px; height:340px; left:-90px; top:-70px; background:#2563EB; opacity:.32; animation:blobFloat1 22s ease-in-out infinite;}
-.bg-blobs .b2{width:300px; height:300px; right:-80px; top:110px; background:#F59E0B; opacity:.28; animation:blobFloat2 26s ease-in-out infinite;}
+.bg-blobs .b1{width:340px; height:340px; left:-90px; top:-70px; background:#0060F8; opacity:.32; animation:blobFloat1 22s ease-in-out infinite;}
+.bg-blobs .b2{width:300px; height:300px; right:-80px; top:110px; background:#F5B400; opacity:.28; animation:blobFloat2 26s ease-in-out infinite;}
 .bg-blobs .b3{width:280px; height:280px; left:20%; bottom:-120px; background:#38BDF8; opacity:.26; animation:blobFloat3 30s ease-in-out infinite;}
 @keyframes blobFloat1{0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(45px,55px) scale(1.15);}}
 @keyframes blobFloat2{0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-55px,45px) scale(.9);}}
@@ -114,7 +114,7 @@ const CSS = `
 }
 .howto-btn{display:inline-flex; align-items:center; gap:6px; margin:8px 0 24px; padding:9px 14px; border-radius:12px;
   background:var(--turf); color:#fff; font-family:'Sora'; font-weight:700; font-size:13px;
-  text-decoration:none; box-shadow:0 4px 14px -6px rgba(37,99,235,.55);}
+  text-decoration:none; box-shadow:0 4px 14px -6px rgba(0,96,248,.55);}
 
 /* Topbar */
 .top{position:sticky; top:0; z-index:30; backdrop-filter:blur(12px);
@@ -145,8 +145,8 @@ const CSS = `
 /* Panel del asistente de reserva: fondo degradado propio, distinto del resto
    de la app pero armado con los mismos colores de marca (azul/ámbar/celeste). */
 .booking-shell{
-  background:linear-gradient(150deg, rgba(37,99,235,.14), rgba(217,119,6,.09) 55%, rgba(56,189,248,.10));
-  border:1px solid rgba(37,99,235,.16);
+  background:linear-gradient(150deg, rgba(0,96,248,.14), rgba(245,180,0,.09) 55%, rgba(56,189,248,.10));
+  border:1px solid rgba(0,96,248,.16);
   border-radius:22px; padding:9px; display:flex; flex-direction:column; gap:14px;
 }
 .booking-shell .card{box-shadow:0 4px 16px -10px rgba(15,23,42,.12);}
@@ -158,13 +158,13 @@ const CSS = `
   transition:transform .08s ease, border-color .12s, box-shadow .12s;}
 .court-card:active{transform:scale(.98);}
 .court-card .cc-icon{flex:none; width:46px; height:46px; border-radius:14px; display:grid; place-items:center;
-  background:rgba(37,99,235,.1); color:var(--turf-dim);}
+  background:rgba(0,96,248,.1); color:var(--turf-dim);}
 .court-card .cc-info{flex:1; min-width:0; display:flex; flex-direction:column; gap:2px;}
 .court-card .cc-name{font-family:'Sora'; font-weight:800; font-size:15px; color:var(--txt);}
 .court-card .cc-desc{font-size:12px; color:var(--mut); margin-top:2px;}
 .court-card .cc-check{flex:none; width:23px; height:23px; border-radius:999px; border:2px solid var(--line);
   display:grid; place-items:center; color:transparent; transition:background .12s, border-color .12s;}
-.court-card.on{border-color:var(--turf); background:#EFF6FF; box-shadow:0 8px 20px -12px rgba(37,99,235,.45);}
+.court-card.on{border-color:var(--turf); background:#EFF6FF; box-shadow:0 8px 20px -12px rgba(0,96,248,.45);}
 .court-card.on .cc-check{background:var(--turf); border-color:var(--turf); color:#fff;}
 
 /* Segmented selector */
@@ -179,22 +179,22 @@ const CSS = `
 /* Scoreboard grid */
 .grid-hours{display:grid; grid-template-columns:1fr; gap:9px;}
 @media (min-width:480px){ .grid-hours{grid-template-columns:repeat(2,1fr);} }
-.slot{position:relative; display:flex; align-items:center; gap:8px; border:1px solid var(--line); border-left:4px solid #F59E0B;
+.slot{position:relative; display:flex; align-items:center; gap:8px; border:1px solid var(--line); border-left:4px solid #F5B400;
   background:var(--surf); border-radius:13px; padding:9px 10px; cursor:pointer; text-align:left;
   transition:transform .08s ease, border-color .12s; min-height:60px;}
 .slot:active{transform:scale(.97);}
-.slot .icon{flex:none; display:grid; place-items:center; width:28px; height:28px; border-radius:999px; background:#FEF3C7; color:#B45309;}
+.slot .icon{flex:none; display:grid; place-items:center; width:28px; height:28px; border-radius:999px; background:#FFF3D1; color:#A87A00;}
 .slot .info{flex:1; min-width:0;}
 .slot .t{font-family:'Sora',sans-serif; font-weight:700; font-size:12.5px; line-height:1.3; color:var(--txt); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 .slot .p{font-size:11.5px; color:var(--mut); margin-top:3px; font-weight:700;}
 .slot .tag{flex:none; font-size:9px; font-weight:800; letter-spacing:.03em; text-transform:uppercase;
-  padding:4px 7px; border-radius:999px; background:rgba(22,163,74,.12); color:#16A34A; white-space:nowrap;}
+  padding:4px 7px; border-radius:999px; background:rgba(0,96,248,.12); color:#0060F8; white-space:nowrap;}
 .slot.night{border-left-color:#0B1740; background:#14213D;}
 .slot.night .icon{background:rgba(255,255,255,.16); color:#fff;}
 .slot.night .t{color:#fff;}
 .slot.night .p{color:rgba(255,255,255,.65);}
 .slot.night .tag{background:rgba(74,222,128,.22); color:#4ADE80;}
-.slot.sel{border-color:var(--turf-dim); border-left-color:var(--turf-dim); background:var(--turf); box-shadow:0 4px 14px -6px rgba(37,99,235,.55);}
+.slot.sel{border-color:var(--turf-dim); border-left-color:var(--turf-dim); background:var(--turf); box-shadow:0 4px 14px -6px rgba(0,96,248,.55);}
 .slot.sel .icon{background:rgba(255,255,255,.25); color:#fff;}
 .slot.sel .t, .slot.sel .p{color:#fff; opacity:1;}
 .slot.sel .tag{background:rgba(255,255,255,.28); color:#fff;}
@@ -208,7 +208,7 @@ const CSS = `
 .step-dot{width:32px; height:32px; border-radius:999px; display:grid; place-items:center; font-family:'Sora'; font-weight:800;
   font-size:13px; background:var(--bg2); color:var(--mut); border:1px solid var(--line); flex:none; transition:background .15s, border-color .15s, color .15s; cursor:default;}
 .step-dot.done{background:var(--turf); color:#fff; border-color:var(--turf); cursor:pointer;}
-.step-dot.current{background:var(--turf); color:#fff; border-color:var(--turf); box-shadow:0 0 0 4px rgba(37,99,235,.18);}
+.step-dot.current{background:var(--turf); color:#fff; border-color:var(--turf); box-shadow:0 0 0 4px rgba(0,96,248,.18);}
 .step-line{flex:1; height:2px; background:var(--line); margin:0 6px; min-width:14px; max-width:44px;}
 .step-line.done{background:var(--turf);}
 .step-title{display:flex; align-items:center; gap:8px; font-family:'Sora'; font-weight:700; font-size:15px; margin-bottom:2px; color:var(--txt);}
@@ -226,8 +226,8 @@ const CSS = `
 .btn{border:0; border-radius:13px; font-family:'Sora'; font-weight:700; font-size:15px; cursor:pointer;
   padding:13px 20px; display:inline-flex; align-items:center; gap:9px; justify-content:center;}
 .btn-yape{background:linear-gradient(135deg,var(--yape),var(--yape2)); color:#fff; box-shadow:0 10px 30px -12px rgba(122,63,242,.6);}
-.btn-turf{background:var(--turf); color:#fff; box-shadow:0 4px 14px -6px rgba(37,99,235,.55);}
-.btn-amber{background:var(--amber); color:#fff; box-shadow:0 4px 14px -6px rgba(217,119,6,.5);}
+.btn-turf{background:var(--turf); color:#fff; box-shadow:0 4px 14px -6px rgba(0,96,248,.55);}
+.btn-amber{background:var(--amber); color:#fff; box-shadow:0 4px 14px -6px rgba(245,180,0,.5);}
 .btn-ghost{background:var(--surf); color:var(--txt); border:1px solid var(--line); font-weight:600; font-size:13px; padding:9px 14px;}
 .btn-danger{background:var(--danger-bg); color:#B91C1C; border:1px solid #FECACA; font-weight:600; font-size:13px; padding:9px 14px;}
 .btn:disabled{opacity:.4; cursor:not-allowed;}
@@ -266,7 +266,7 @@ const CSS = `
 .row{display:flex; align-items:center; gap:12px; padding:12px 0; border-bottom:1px solid var(--line);}
 .row:last-child{border-bottom:0;}
 .pill{font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:4px 9px; border-radius:999px;}
-.pill.ok{background:#DCFCE7; color:#15803D;}
+.pill.ok{background:#DBEAFE; color:#0047BE;}
 .pill.pend{background:#FEF3C7; color:#92400E;}
 .pill.ns{background:#FEE2E2; color:#B91C1C;}
 
@@ -852,7 +852,7 @@ function ClientView({ prices, priceFor, bookings, setBookings, client, onLogout,
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 2, alignItems: "center" }}>
             <div className="step-title" style={{ marginBottom: 0 }}><span className="step-num">3</span> Elige el horario</div>
             <div className="xs mut" style={{ display: "flex", gap: 14 }}>
-              <span><span style={{ color: "#F59E0B" }}>●</span> Día</span>
+              <span><span style={{ color: "#F5B400" }}>●</span> Día</span>
               <span><span style={{ color: "#14213D" }}>●</span> Noche</span>
               <span><span style={{ color: "#94A3B8" }}>●</span> Ocupado</span>
             </div>
@@ -972,7 +972,7 @@ function ClientView({ prices, priceFor, bookings, setBookings, client, onLogout,
         <div className="overlay" onClick={() => setDone(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="pad" style={{ textAlign: "center" }}>
-              <div style={{ width: 60, height: 60, borderRadius: 999, margin: "6px auto 12px", background: "rgba(217,119,6,.14)", display: "grid", placeItems: "center" }}>
+              <div style={{ width: 60, height: 60, borderRadius: 999, margin: "6px auto 12px", background: "rgba(245,180,0,.14)", display: "grid", placeItems: "center" }}>
                 <Clock size={28} color="var(--amber)" />
               </div>
               <div className="disp" style={{ fontWeight: 800, fontSize: 19 }}>Separación enviada</div>
@@ -1027,7 +1027,7 @@ function AdminLogin({ onLogin }) {
       <div style={{ textAlign: "center" }}>
         <div style={{
           width: 76, height: 76, borderRadius: 20, margin: "0 auto 16px", overflow: "hidden",
-          boxShadow: "0 0 0 1px rgba(217,119,6,.25), 0 14px 40px -12px rgba(217,119,6,.3)",
+          boxShadow: "0 0 0 1px rgba(245,180,0,.25), 0 14px 40px -12px rgba(245,180,0,.3)",
         }}>
           <img src="/logo.png" alt="ARENA AZUL" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         </div>
@@ -1393,8 +1393,8 @@ function Resumen({ bookings, products, clients, sales, expenses, setExpenses }) 
               <YAxis stroke="#64748B" fontSize={11} tickLine={false} axisLine={false} width={30} />
               <Tooltip contentStyle={{ background: "#FFFFFF", border: "1px solid #E5E7EB", borderRadius: 10, color: "#1E293B" }}
                 formatter={(v, n) => [money(v), n === "ingresos" ? "Ingresos" : "Gastos"]} />
-              <Bar dataKey="ingresos" fill="#2563EB" radius={[5, 5, 0, 0]} />
-              <Bar dataKey="gastos" fill="#D97706" radius={[5, 5, 0, 0]} />
+              <Bar dataKey="ingresos" fill="#0060F8" radius={[5, 5, 0, 0]} />
+              <Bar dataKey="gastos" fill="#F5B400" radius={[5, 5, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -1714,7 +1714,7 @@ function Scanner({ products, setProducts, onDetect, onClose }) {
 
           {newCode ? (
             <div style={{ marginTop: 12 }}>
-              <div className="wa" style={{ borderColor: "var(--amber)", background: "rgba(217,119,6,.08)", marginBottom: 12 }}>
+              <div className="wa" style={{ borderColor: "var(--amber)", background: "rgba(245,180,0,.08)", marginBottom: 12 }}>
                 <AlertTriangle size={16} color="var(--amber)" />
                 <span className="sm">Producto nuevo. Regístralo para que la próxima vez se reconozca solo.</span>
               </div>
@@ -1795,7 +1795,7 @@ function Quiosco({ products, setProducts, sales, setSales }) {
         <ScanLine size={20} /> Escanear producto para vender
       </button>
 
-      {msg && <div className="wa" style={{ borderColor: "var(--turf)", background: "rgba(37,99,235,.08)" }}><Check size={16} color="var(--turf)" /><span className="sm">{msg}</span></div>}
+      {msg && <div className="wa" style={{ borderColor: "var(--turf)", background: "rgba(0,96,248,.08)" }}><Check size={16} color="var(--turf)" /><span className="sm">{msg}</span></div>}
 
       {/* Acceso rápido productos */}
       <div className="card pad">
